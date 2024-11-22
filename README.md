@@ -129,6 +129,9 @@ El proyecto está configurado para ser desplegado en Render. Sigue estos pasos p
 - ➡️ Flecha derecha: Mover a la derecha
 - Enter: Enviar mensaje en el chat
 
+## 🎯 Capturas de pantalla <a name = "screenshots"></a>
+
+
 ![image](https://github.com/user-attachments/assets/4f7651f8-b507-4ba4-a2eb-b07fb439567e)
 
 ![image](https://github.com/user-attachments/assets/30ac0ff0-5c36-4a40-9348-7f20ec6a7f71)
