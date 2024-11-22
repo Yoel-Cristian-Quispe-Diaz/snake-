@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Battle Royale</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="registro-container">
+        <div class="registro-card">
+            <h2>🐍 Snake Battle Royale</h2>
+            <form id="registro-form">
+                <div class="input-group">
+                    <label for="nombre">Nombre de Usuario</label>
+                    <input type="text" id="nombre" required 
+                           placeholder="Ingresa tu nombre" maxlength="15">
+                </div>
+                <div class="input-group">
+                    <label for="tipo">Modo de Juego</label>
+                    <select id="tipo" required>
+                        <option value="jugador">Jugador</option>
+                        <option value="espectador">Espectador</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-button">Entrar al Juego</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="game-container">
+        <div class="game-section">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="controls">
+                <button id="up" class="control-button">▲</button>
+                <div class="horizontal-buttons">
+                    <button id="left" class="control-button">◄</button>
+                    <button id="right" class="control-button">►</button>
+                </div>
+                <button id="down" class="control-button">▼</button>
+            </div>
+        </div>
+
+        <div class="side-panel">
+            <div id="scoreboard">
+                <h3>🏆 Tabla de Puntajes</h3>
+                <!-- Los puntajes se insertarán dinámicamente aquí -->
+            </div>
+
+            <div id="chat-container">
+                <div id="chat-messages">
+                    <!-- Los mensajes se insertarán dinámicamente aquí -->
+                </div>
+                <input type="text" id="chat-input" 
+                       placeholder="Escribe un mensaje..." maxlength="100">
+            </div>
+        </div>
+    </div>
+
+    <div id="game-over-modal">
+        <div class="modal-content">
+            <h2>¡Game Over!</h2>
+            <div id="game-over-mensaje"></div>
+            <div id="game-over-puntaje"></div>
+            <p>Te has convertido en espectador.<br>
+               ¡Puedes seguir viendo la partida y chateando!</p>
+            <button class="modal-button" onclick="document.getElementById('game-over-modal').style.display='none'">
+                Continuar como Espectador
+            </button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
