@@ -114,6 +114,21 @@ socket.on('update', (data) => {
     render();
 });
 
+document.getElementById('up').addEventListener('click', () => {
+    socket.emit('move', 'UP');
+});
+document.getElementById('down').addEventListener('click', () => {
+    socket.emit('move', 'DOWN');
+});
+document.getElementById('left').addEventListener('click', () => {
+    socket.emit('move', 'LEFT');
+});
+document.getElementById('right').addEventListener('click', () => {
+    socket.emit('move', 'RIGHT');
+});
+
+
+
 document.addEventListener('keydown', (e) => {
     if (miTipo === 'jugador') {
         const direccion = {
