@@ -48,7 +48,7 @@ npm >= 6.x
 1. Clona el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/snake-battle-royale.git
+git clone [https://github.com/tu-usuario/snake-battle-royale.git](https://github.com/Yoel-Cristian-Quispe-Diaz/snake-.git)
 ```
 
 2. Instala las dependencias
